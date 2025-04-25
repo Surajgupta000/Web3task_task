@@ -1,0 +1,121 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: #fff;
+}
+
+.page-width {
+  width: 100%;
+  max-width: 1100px;
+  height: 100vh;
+  margin: auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 80px;
+  justify-content: center;
+}
+
+.intelligence_gradient_container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.intelligence_gradient_container > span {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  background-image: linear-gradient(90deg, #89aaf8 20%, #b770fc 40%, #d24dc3 60%, #e85560 80%, #ee7b6b 100%);
+  background-size: 0% 0%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  filter: blur(35px);
+  position: absolute;
+  top: -50px;
+  transition: all 1.2s ease-in-out;
+}
+
+.intelligence_main-heading h2 {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 3.8em;
+  font-weight: 600;
+  background: linear-gradient(90deg, #89aaf8 35%, #b770fc 55%, #d24dc3 65%, #e85560 88%, #ee7b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.4s linear;
+}
+
+.intelligence_main-heading h2.showText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intelligence_btns_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 100px;
+  justify-content: center;
+}
+
+.control_btns {
+  background: #647dc3;
+  color: #fff;
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: #586bb8 0px 7px 2px, #000 0px 8px 5px;
+}
+
+.control_btns:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.control_btns:active {
+  top: 4px;
+  box-shadow: #586bb8 0px 3px 2px, #000 0px 3px 5px;
+}
+
+.note {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #647dc3;
+  font-size: 1em;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s linear;
+}
+
+.note.showText {
+  opacity: 1;
+  transform: translateY(0);
+}
